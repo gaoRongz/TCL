@@ -1,0 +1,67 @@
+body{background: #fff;}
+/*===========================header=============================*/
+header{padding-left: 120px; font-size: 30px; height: 84px;line-height:84px}
+header h1{margin-top: 20px; margin-right: 25px;}
+
+
+/*===========================center=============================*/
+#center{ height:480px;background: url(../img/login-back.jpg) no-repeat center; position: relative; margin-bottom: 45px; }
+#center .loginBox{width: 282px; height: 380px; background: #fff; position: absolute; right: 107px; top:40px;padding: 20px 40px 20px;}
+#center .loginBox .boxheader{border-bottom:1px solid #ccc; font-size: 20px; margin: 3px 0 15px 0; padding-bottom: 18px; overflow: hidden; }
+#center .loginBox .boxheader a{display: block;width: 32px; height: 32px; margin: 0px 5px;
+background: url(../img/t-party-icon.png) no-repeat 0 -84px; }
+#center .loginBox .boxheader a:nth-child(2){background-position-y: 0px;}
+#center .loginBox .boxheader a:nth-child(3){background-position-y: -42px;}
+
+#center .loginBox>p{
+	font-size: 18px; 
+	line-height:36px ;
+	}
+
+#center .loginBox  input{
+	width: 100%; 
+	height: 40px; 
+	border:1px solid #ccc;    	
+	line-height: 40px;
+    text-indent: 50px;
+    font-size: 12px;
+    box-sizing: border-box;
+    }
+#center .loginBox span.bg{
+	 display: block; 
+	 width: 28px; 
+	 height: 27px; 
+	 background: url(../img/l-icon.png) no-repeat ; 
+	 position: absolute; 
+	 margin: 8px 0 0 8px;
+	 }
+#center .loginBox span.tishi{	 
+	color: red;
+    font-size: 12px;
+    position: absolute;
+    bottom: -2px;
+    left: 9px;
+   	}
+#center .loginBox .text>span.bg{ background-position: -32px -1px}
+#center .loginBox .password>span.bg{ background-position: -96px 0}
+#center .loginBox .text{
+    margin-top: 5px;
+    padding-bottom: 15px;
+}
+#center .loginBox .password{
+    margin-top: 5px;
+    padding-bottom: 15px;
+}
+
+#center .loginBox .loginBtn{ width:100%; height:40px ; background:red; color: #fff; border:0; font-size: 18px; outline: none; cursor: pointer;}
+#center .loginBox .method{width: 350px; margin-top: 4px;}
+#center .loginBox .method a{ font-size: 12px; color: #333; line-height: 20px; margin-right: 44px;display: inline-block;}
+#center .loginBox .method a:hover{ text-decoration: underline;}
+
+/*===========================footer=============================*/
+footer{ text-align: center;}
+footer p{color: #999; line-height: 18px;}
+footer p:nth-child(1) a{padding:0px 21px; text-align:center; border-left:1px solid #ccc; display: inline-block; color: #666;}
+footer p:nth-child(1) a:nth-child(1){border: 0;}
+footer p:nth-child(2){margin-top: 13px;}
+footer p:nth-child(2) a{color: #333;}

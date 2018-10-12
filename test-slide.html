@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/test-slide.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<div id="container">
+        <ul class="pic">
+            <li><a href="javascript:;"><img src="img/banner1.jpg" alt="pic1"></a></li>
+            <li><a href="javascript:;"><img src="img/banner2.jpg" alt="pic2"></a></li>
+            <li><a href="javascript:;"><img src="img/banner3.jpg" alt="pic3"></a></li>
+        </ul>
+        <ul id="position">
+            <li class="cur"></li>
+            <li class=""></li>
+            <li class=""></li>
+        </ul>
+        <a href="javascript:;" id="prev" class="arrow"><i class="iconfont">&#xe502;</i></a>
+        <a href="javascript:;" id="next" class="arrow"><i class="iconfont">&#xe6ba;</i></a>
+
+    </div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script>
+$(function(){
+            //第一张显示
+            $(".pic li").eq(0).show();
+            //鼠标滑过手动切换，淡入淡出
+            $("#position li").click(function() {
+                $(this).addClass('cur').siblings().removeClass("cur");
+                var index = $(this).index();
+                i = index;//不加这句有个bug，鼠标移出小圆点后，自动轮播不是小圆点的后一个
+                // $(".pic li").eq(index).show().siblings().hide();
+                $(".pic li").eq(index).fadeIn(500).siblings().fadeOut(500);
+            });
+            //自动轮播
+            var i=0;
+            var timer=setInterval(play,2000);
+            //向右切换
+            var play=function(){
+                i++;
+                i = i > 2 ? 0 : i ;
+                $("#position li").eq(i).addClass('cur').siblings().removeClass("cur");
+                $(".pic li").eq(i).fadeIn(500).siblings().fadeOut(500);
+            }
+            //向左切换
+            var playLeft=function(){
+                i--;
+                i = i < 0 ? 2 : i ;
+                $("#position li").eq(i).addClass('cur').siblings().removeClass("cur");
+                $(".pic li").eq(i).fadeIn(500).siblings().fadeOut(500);
+            }
+            //鼠标移入移出效果
+            $("#container").hover(function() {
+                clearInterval(timer);
+            }, function() {
+                timer=setInterval(play,2000);
+            });
+            //左右点击切换
+            $("#prev").click(function(){
+                playLeft();
+            })
+            $("#next").click(function(){
+                play();
+            })
+        })
+</script>

@@ -1,0 +1,65 @@
+
+        #container{
+            position: relative;
+            width: 100%;
+            max-width: 1920px;
+            height: 550px;
+           
+        }
+        
+        .pic li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            text-align: center;
+        }
+        .pic li img {
+           position: absolute;
+           left: 50%;
+           margin-left: -240px; 
+           
+           width: auto;
+        }
+        #position{
+            position: absolute;
+            bottom: 0;
+            right:0;
+            margin-bottom: 20px;
+            width: 400px;
+            text-align: center;
+            right: -30px;
+        }
+        #position li{
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            margin:0 4px;
+            display: inline-block;
+            border-radius:50%;
+    		
+        }
+        #position .cur{
+            background-color: #f00;
+        }
+         .arrow { 
+              cursor: pointer;
+              font-size: 50px; 
+              position: absolute; 
+              z-index: 2; 
+              top: 50%;
+              margin-top: -20px; /*width的一半*/
+              color: #fff;
+		   	  width: 70px;
+		      height: 70px;
+		      text-align: center;
+		      line-height: 70px;
+          }
+        #prev { 
+            left: 300px;
+		
+        }
+        #next { 
+            right: 150px;
+       
+        }

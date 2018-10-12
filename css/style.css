@@ -1,0 +1,38 @@
+/*=========================reset================*/
+body,h1,h2,h3,h4,h5,h6,p,a,img,ul,li,ol,dl,dt,dd,input{ padding:0; margin:0}
+ul,ol{ list-style:none;}
+input{ outline:none;}
+img{ display:block; border:0;}
+
+body{ font-size:12px;  font-family:"微软雅黑"; background: #f2f2f2;}
+
+a{ text-decoration:none; color:#ccc; }
+a:hover{ color:#f00;}
+/*========================public================*/
+.w{ width:1228px; margin:0 auto}
+.l{ float:left;}
+.r{ float:right}
+.red{color: red;}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/iconfont.woff') format('woff'),
+  url('../font/iconfont.ttf') format('truetype'),
+  url('../font/iconfont.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font1/iconfont.eot');
+  src: url('../font1/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../font1/iconfont.woff') format('woff'),
+  url('../font1/iconfont.ttf') format('truetype'),
+  url('../font1/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
