@@ -2,12 +2,12 @@
 	$(function(){
 		$(".banner-nav ul li").hover(function(){
 			$(this).css({
-				"background-color":"rgba(255,255,255,.9)",
+				"background-color":"rgba(255,255,255,.9)"
 			});
 		},
 		function(){
 			$(this).css({
-				"background-color":"rgba(0,0,0,.0)",
+				"background-color":"rgba(0,0,0,.0)"
 			});
 		});
 	});
@@ -42,7 +42,7 @@
 		)
 //置顶
 		$("#Top ul li.toTop").click(function(){
-			$('body,html').animate({scrollTop:0},1000);
+			$('body,html').animate({scrollTop:0},200);
 			
 		});
 });
@@ -59,7 +59,6 @@
 			$("#tv").slideUp(100);		
 		});
 	});
-	
 	
 	
 //侧边ul
@@ -80,7 +79,7 @@ window.onscroll = function(){
 
 	//获取页面滚动的距离
 	let  _top = document.body.scrollTop || document.documentElement.scrollTop;
-	let top = _top+100;    //不需要盒子到顶时就消失或变色。
+	let top = _top+190;    //不需要盒子到顶时就消失或变色。
 	if(top>= tv_top && _top<=health_top){
 		$(".side_ul").css({
 		"display" :"block",				
@@ -110,6 +109,8 @@ window.onscroll = function(){
 	}else {
 		$(".side_ul").css({	"display" : "none"});
 	}
+	
+	
 	
 	
 }

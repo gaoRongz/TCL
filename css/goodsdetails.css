@@ -1,0 +1,15 @@
+#describe .w{ height: 50px; line-height: 50px; font-size: 18px; color: #666;}
+#purchase{   
+	
+	min-height: 620px;
+    margin: 60px auto;
+    position: relative;
+    border: none!important;
+    overflow:hidden;
+    background: #f00;
+}
+#purchase .pic{
+    padding: 0 70px;
+    position: absolute;
+    top: 0;
+}

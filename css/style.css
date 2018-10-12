@@ -1,7 +1,8 @@
 /*=========================reset================*/
 body,h1,h2,h3,h4,h5,h6,p,a,img,ul,li,ol,dl,dt,dd,input{ padding:0; margin:0}
 ul,ol{ list-style:none;}
-input{ outline:none;}
+input,button{ outline:none;}
+
 img{ display:block; border:0;}
 
 body{ font-size:12px;  font-family:"微软雅黑"; background: #f2f2f2;}
@@ -36,3 +37,79 @@ a:hover{ color:#f00;}
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+
+
+/*========================top===============*/
+#top{height:40px;line-height:40px; background:#666;}
+#top .w ul li:hover a{color: #fff;}
+#top .w ul.l li.l{margin-left:43px; color:#ccc;}
+#top .w ul.l li.l:nth-child(1){margin-left:0;}
+#top .w ul.r li.l{color:#ccc; position: relative;}
+#top .w ul.r li.l div.saoMa{
+	position: absolute; 
+	top:40px;
+	left: -50px; 
+	width:180px; 
+	height: 190px;
+	background: #fff;
+	z-index: 10000;
+	text-align: center;
+	border:1px solid #ccc ;
+	display: none;
+	}
+#top .w ul.r li.l div.saoMa img{
+	width:130px; 
+	height: 130px;
+	vertical-align: middle;
+	margin: 10px auto 0px;
+}
+#top .w ul.r li.l div.saoMa p{line-height: 18px;color: #666;}
+#top .w ul.r li.l:nth-child(1):hover div.saoMa{	display: block;}
+#top .w ul.r li.l a{ border-left:1px solid #ccc; padding: 0px 15px; font-size: 11px;}
+#top .w ul.r li.l:first-child a{border-left:0;}
+#top .w ul.r li.l:last-child a{padding-right:0;}
+
+/*========================server==============*/   
+#server{ background: #F2F2F2;} 
+#server .w ul{height: 126px;  border-bottom:1px solid #ccc; font-size: 14px; }
+#server .w ul li{  text-align: center;color: #666;line-height: 30px;padding: 43px 0;cursor: pointer;}
+#server .w ul li:nth-child(1){text-align: left;width:307px;}
+#server .w ul li:nth-child(2){width: 240px; padding-right: 66px;}
+#server .w ul li:nth-child(3){width: 260px; padding-left: 48px;}
+#server .w ul li:nth-child(4){text-align: right; width:307px;}
+#server .w ul li>span>i{ font-size: 35px; vertical-align:middle;}
+    
+/*========================help=============*/  
+#help{ overflow: hidden;} 
+#help .w dl{ margin-top: 25px; width: 169px;}
+#help .w dl dt{ line-height: 14px; font-size:14px; color: #000; font-weight: bold; margin-bottom: 14px;}
+#help .w dl dd{ height: 25px; line-height: 25px;}
+#help .w dl dd a{color: #666;}
+#help .w dl dd a.red{color: #f00;}
+#help .w dl dd img{width:120px; height: 120px;}
+#help .w dl p.first{color:#f00; font-size: 20px; line-height: 24px; letter-spacing: 2px;}
+#help .w dl>p.last{color:#666; line-height: 20px;margin-bottom: 16px;}
+#help .w dl>a{display: block; width:158px; height: 35px; text-align: center; line-height:35px ; color: #f00; border:1px solid #f00;}
+#help .w dl>a span{font-size: 20px; vertical-align: middle; }
+#help .w dl>a:hover{ color: #fff;}
+
+/*========================footer=============*/  
+#footer{overflow: hidden; margin: 0 auto;}
+#footer .w { margin-top:25px;line-height: 22px;}
+#footer .w p:nth-child(1)>a{ padding:0 15px ; color: #666; }
+#footer .w p:nth-child(1)>a:first-child {padding-left:0;}
+#footer .w p:nth-child(3){height: 22px; line-height: 22px;}
+#footer .w p:nth-child(3) img{ display: inline; width: 12px; height: 12px; }
+#footer .w p:nth-child(3)>a{ color: #999; }
+#footer .w p:nth-child(3)>a:hover{ color: #666;text-decoration: underline;}
+#footer .w div.center{ text-align: center; margin-bottom: 30px;}
+#footer .w div.center>div{vertical-align: middle;display: inline-block;}
+#footer .w div.center>div img{width: 78px; height: 29px; margin:0 4px}
+
+/*========================toTop=============*/  
+#Top{ overflow: hidden; position: fixed; right: 30px; bottom: 150px;z-index: 200; }
+#Top a{display: block;background: #fff; border:1px solid #f2f2f2; color: #999; font-size: 22px; 
+width: 40px;height: 40px; line-height: 40px; text-align: center; 
+margin-top: 1px; transition: all 2s; overflow: hidden;}

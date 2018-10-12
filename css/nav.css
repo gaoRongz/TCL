@@ -1,53 +1,94 @@
-		#nav{background: #FFF; height: 82px;  line-height: 82px;}
-		#nav .big{width:1290px; margin:0 auto;  }
-		#nav .big ul{position: relative;}
-		#nav h1{margin-top: 17px; margin-right: 100px;}
-		#nav ul li{ padding: 0px 17px; font-size: 14px;}
-		#nav ul li a{color: #000; display: block;}
-		#nav ul li a:hover{color: #f00;}
-		#nav .menu{margin-left: 83px;}
-		#nav .menu a{ padding:0px 12px; color: #000; font-size: 14px;}
-		#nav .menu .search{ width: 233px; height: 34px; border: 1px solid #ccc;padding: 0 5px; }
-		#nav .menu .menu-search{position: relative;}
-		#nav .menu .menu-search span{
-			    background-color: #e4e4e4;
-			    width: 28px;
-			    height: 28px;
+/*========================nav===============*/
+			#nav{
+			 	width: 100%;
+     			background-color: #fff;
+			}
+			
+			.nav-bar{
+				width: 1270px;
+			    height: 80px;
+			    line-height:80px;
+			    position: relative;
+				margin: 0 auto;
+			}	
+			.menu-wrap{
+				height: 100%;
+			}
+			#nav .nav-bar h1{margin-top: 15px;}
+			#nav .nav-bar .menuL{
+				margin-left: 100px;
+				position: relative;
+			    height:100%;
+			    line-height:100%;
+			}
+			#nav .nav-bar .menuL .mes:hover .goodsinfoList{
+				display: block;
+			}
+			#nav .nav-bar .menuL .mes{
+				height: 100%;
+			    position: relative;
+			    box-sizing: content-box;
+			    cursor: pointer;
+			    line-height:80px;
+			}
+			
+			#nav .nav-bar .menuL .mes a{
+				padding:0 16px;
+				height:100%;		
+			    font-size: 14px;
+			    color: #333;
 			    display: block;
-			    text-align: center;
-			    line-height: 28px;
-			    border-radius: 50%;
-			    position: absolute;
-			    right: 8px;
-    			top: -5px;
-    			cursor: pointer;
-		}
-		
-	
+			    position: relative;
+			    background: #fff;
+			}
+			#nav .nav-bar .menuL .mes a:hover{
+				color: #f00;
+			}
+			#nav .nav-bar .menuR{
+				position: relative;
+			    height: 80px;
+			    line-height:80px;
+			    
+			}
+			#nav .menuR a{ padding:0px 12px; color: #000; font-size: 14px;}
+			#nav .menuR .search{ width: 233px; height: 34px; border: 1px solid #ccc;padding: 0 5px; }
+			#nav .menuR .menu-search{position: relative;}
+			#nav .menuR .menu-search span{
+				    background-color: #e4e4e4;
+				    width: 28px;
+				    height: 28px;
+				    display: block;
+				    text-align: center;
+				    line-height: 28px;
+				    border-radius: 50%;
+				    position: absolute;
+				    right: 8px;
+	    			top: -5px;
+	    			cursor: pointer;
+			}
 		.goodsinfoList {
-			height:0px;
-		    padding-top: 30px;
-		    text-align: center;
-		    background: #fff;
-		    display: none;
-		    position: absolute;
-		    top:120px;
-		    width: 100%;
-		    margin: 0 auto;
-		    z-index: 10000;
-		    
-		}
+				height:210px;
+			    padding-top: 30px;
+			    text-align: center;
+			    background: #fff;
+			    display: none;
+			    position: fixed;
+			    top:120px;
+			    left:-180px;
+			    width: 1720px;
+			    max-width: 1920px;
+			    margin: 0 auto;
+			    z-index: 10000;
+			}
 		.goodsinfoList ul{
 			max-width: 1920px;
 		    height: 100%;
 		    margin: 0 auto;
-		    display: inline-block;
-		   
-		    
+		    display: inline-block;		   
 		}
 		.goodsinfoList  ul li{
 			max-width: 162px;
-		    margin: 0 15px;
+		    margin: 0 30px;
 		    float: left;
 		}
 		.goodsinfoList  ul li a img{
@@ -80,4 +121,3 @@
 			left:"200px"
 			
 		}
-		
