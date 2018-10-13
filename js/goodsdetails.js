@@ -1,67 +1,3 @@
-//鼠标移上，二级列表出现
-	$(function(){
-		$(".banner-nav ul li").hover(function(){
-			$(this).css({
-				"background-color":"rgba(255,255,255,.9)"
-			});
-		},
-		function(){
-			$(this).css({
-				"background-color":"rgba(0,0,0,.0)"
-			});
-		});
-	});
-//goods列表的效果
-	$(function(){	
-		$(".goods ul li").hover(function(){
-			$(this).css({
-				"box-shadow":" 0 0 15px 5px #ccc"
-			})
-			.animate({
-				top:"-8px"
-			});
-		},function(){
-			$(this).css({
-				"box-shadow":"0px 0px 0px 0px #fff"
-			})
-			.animate({
-				top:"0px"
-			});
-		});
-		
-//置顶盒子鼠标移上变色
-		$("#Top a").hover(function(){
-			$(this).css({
-				"color":"#f00"
-			});
-		},function(){
-			$(this).css({
-				"color":"#999"
-			});
-			}
-		)
-//置顶
-		$("#Top ul li.toTop").click(function(){
-			$('body,html').animate({scrollTop:0},200);
-			
-		});
-});
-//导航上的二级菜单鼠标滑过出现
-	$(function(){
-		$("#nav .big ul li.tv a").hover(function(){
-			$("#tv").animate({
-				height:"210px"
-			},200).css({
-				"display":"block"
-			});
-		},
-		function(){
-			$("#tv").slideUp(100);		
-		});
-	});
-	
-	
-//侧边ul
 //给窗口添加滚动条事件
 window.onscroll = function(){
 	//TV的位置
@@ -110,5 +46,7 @@ window.onscroll = function(){
 		$(".side_ul").css({	"display" : "none"});
 	}
 }
-
-
+//顶部置顶
+$(function(){
+	
+});
