@@ -24,6 +24,7 @@
 	width: 440px;
 	border-bottom:1px solid #ccc;
 	margin: 0 auto;
+	opacity: 1;
 }
 #purchase .w .pic .bigPic img{
 	height: 440px;
@@ -109,6 +110,7 @@
 #purchase .w .goodsDetail .price .erCode{
 	position: relative;
 }	
+
 #purchase .w .goodsDetail .price .r img.smallMa{
 	width: 14px;
 	height: 14px;
@@ -129,6 +131,9 @@
 	border:1px solid #ccc ;
 	display: none;
 	}
+#purchase .w .goodsDetail .price .erCode:hover div.buyMa{
+	display: block;
+}
 #purchase .w .goodsDetail .price .r div.buyMa  img{
 	
 	width: 127px;
@@ -158,15 +163,15 @@
 	display: block;
 	width: 96px;
 	height: 64px;
-	border:1px solid #f00 ;
+	border:1px solid #ccc ;
 	line-height: 64px;
 	text-align: center; 
 	color: #666;
 	font-size: 14px;
 	margin: 0 5px;
 }
-#purchase .w .goodsDetail .color>a:nth-child(3){
-	border:1px solid #ccc;
+#purchase .w .goodsDetail .color a.cur{
+	border:1px solid #f00 ;
 }
 #purchase .w .goodsDetail .color .select{
 	width: 90px;
@@ -215,7 +220,20 @@
 	position: relative;
     padding: 22px 0;
 }
+#purchase .w .goodsDetail  .serise .buyNow{
+	background: #f00;
+	font-size: 20px;
+	color: #fff;
+	width: 120px;
+	border:0;
+}
+#purchase .w .goodsDetail  .serise .toCart{
+	width:120px;
+	font-size: 20px;
+	color:#f00;
+	border:1px solid #f00
 
+}
 /*====================固定顶部=====================*/
 #fixed{
 	height: 60px;
@@ -302,9 +320,9 @@
 /*=============details===================*/
 #details{ overflow: hidden;}
 #details .w{
-	background: #fcc;
 	overflow: hidden;	
 	width:980px;
+	
 }
 #details .w .picLeft{
 	width:834px;
@@ -320,12 +338,13 @@
 }
 
 
+#details .w .picRight{
 
+}
 #details .w .picRight .side_Box{
 	overflow: hidden;
 	padding-top:48px;      
     position: relative;
-    background: #ff0;
     width:146px;
 }
 #details .w .side_Box ul{
@@ -352,10 +371,11 @@
 
 #details .w .side_Box ul li span{
 	
-	width: 4px;
+	width: 3px;
 	height: 100%;
 	box-sizing: border-box;
-	background: #f00;
+	background: #f2f2f2;
+	
 }
 
 #details .w .picLeft .parameter p{
@@ -390,10 +410,6 @@
     font-size: 14px;
     
 }
-#details .w .picLeft .servicePolicy .listBox .peiSong{
-	display: block;
-	
-}
 #details .w .picLeft .servicePolicy .listBox .peiSong,.install,.invoice,.afterSale,.receipt p{
 	padding-left: 1.5em;
     text-indent: -1.5em;
@@ -402,15 +418,13 @@
     font-weight: 400;
     margin-bottom: 22px;
 }
-#details .w .picLeft .servicePolicy .listBox .install{
-	background: #ffc;
-	display: none;
-}
 #details .w .picLeft .servicePolicy .listBox .invoice,.afterSale,.receipt p{
 	margin-bottom: 0;
 	text-indent: 0;
 	margin-left: 0;
 }
+#details .w .picLeft .servicePolicy .listBox .install{display: block;}
+#details .w .picLeft .servicePolicy .listBox .peiSong{display: none;}
 #details .w .picLeft .servicePolicy .listBox .invoice{display: none;}
 #details .w .picLeft .servicePolicy .listBox .afterSale{display: none;}
 #details .w .picLeft .servicePolicy .listBox .receipt{display: none;}
@@ -429,3 +443,5 @@
 	line-height: 20px;
 	padding:40px 4px;
 }
+
+

@@ -357,9 +357,9 @@
 						<img src="img/gooddetai1.jpg"/>
 					</div>
 					<ul>
-						<li class="l"><img src="img/gooddetai_li1.jpg"/></li>
+						<li class="l"><img src="img/gooddetai1.jpg"/></li>
 						<li class="l"><img src="img/gooddetai_li2.jpg"/></li>
-						<li class="l"><img src="img/gooddetai_li1.jpg"/></li>
+						<li class="l"><img src="img/gooddetai1.jpg"/></li>
 						<li class="l"><img src="img/gooddetai_li4.jpg"/></li>
 					</ul>
 				</div>
@@ -370,8 +370,8 @@
 							【10月10-15日电视专场优惠，购买65A880c即可享受150元红包补贴，下单即送蓝牙音响，铁粉会员积分抵现更优惠】
 						</div>
 						<div class="shouC r">
-							<i class="iconfont"></i>
-							收藏
+							<i class="iconfont">&#xe50d;</i>
+							<span>收藏</span>
 						</div>
 					</div>
 					<div class="jiFen">可获取积分：3199</div>
@@ -390,15 +390,15 @@
 					</div>
 					<div class="color">
 						<p>颜色</p>
-						<a href="#" class="l">咖啡色</a>
+						<a href="#" class="l cur">咖啡色</a>
 					</div>
 					<div class="color size">
 						<p>屏幕尺寸</p>
-						<a href="#" class="l">55寸</a>
+						<a href="#" class="l cur">55寸</a>
 					</div>
 					<div class="color serise">
 						<p>880C系列</p>
-						<a href="#" class="l">55寸</a>
+						<a href="#" class="l cur">55寸</a>
 						<a href="#" class="l">65英寸</a>
 					</div>
 					<div class="color serise">
@@ -409,8 +409,8 @@
                                 <span class="reg" ></span>
                             </div>
                         </div>
-						<a href="#" class="l">55寸</a>
-						<a href="#" class="l">65英寸</a>
+						<a href="#" class="l buyNow">立即购买</a>
+						<a href="#" class="l toCart">加入购物车</a>
 					</div>
 					<div class="color address">
 						配送到：
@@ -425,7 +425,7 @@
 	<div id="details">
 		<div class="w">
 			<div class="picLeft l">
-				<div class="detailsIntr">
+				<div class="detailsIntr" id="detailsIntr">
 					<p><img src="img/detailLeft1.png"/></p>
 					<p><img src="img/detailLeft2.png"/></p>
 					<p><img src="img/detailLeft3.png"/></p>
@@ -435,24 +435,26 @@
 					<p><img src="img/detailLeft7.png"/></p>
 					<p><img src="img/detailLeft8.png"/></p>
 				</div>
-				<div class="parameter">
+				<div class="parameter" id="parameter">
 					<p><img src="img/parameter1.png"/></p>
 				</div>
 				
-				<div class="servicePolicy">
-					<ul>
-						<li class="l">物流配送</li>
-						<li class="l">商品签收</li>
-						<li class="l">产品安装</li>
-						<li class="l">发票</li>
-						<li class="l">售后服务</li>
-					</ul>
+				<div class="servicePolicy" id="servicePolicy">
+					<div class="listOrd">
+						<ul class="listUl">
+							<li class="l cur">物流配送</li>
+							<li class="l">商品签收</li>
+							<li class="l">产品安装</li>
+							<li class="l">发票</li>
+							<li class="l">售后服务</li>
+						</ul>
+					</div>
 					<div class="listBox">
-						<div class="peiSong">
+						<div class="peiSong curr">
 							<p>1. 商城采用第三方物流，地址务必详细写至门牌号，如果物流不覆盖您所在地区，或产品需要调货补货，商城将会在48小时内联系您。</p>
 							<p>2. 付款后3个工作日内发货（预售产品除外），发货后一般3-7天到货，县乡镇和偏远地区有所延长。</p>
 						</div>
-						<div class="receipt">
+						<div class="receipt curr">
 							<p>1. 签收须知：</p>
 							<p>大家电产品贵重，为避免因验货问题使您在购物及使用的过程中有不好的体验，请您在签收时务必开箱验货。</p>
 							<p>2. 签收问题注意事项：</p>
@@ -503,12 +505,12 @@
 								</dd>
 							</dl>
 						</div>
-						<div class="install">
+						<div class="install curr">
 							<p>1. 商城采用第三方物流，地址务必详细写至门牌号，如果物流不覆盖您所在地区，或产品需要调货补货，商城将会在48小时内联系您。</p>
 							<p>2. 付款后3个工作日内发货（预售产品除外），发货后一般3-7天到货，县乡镇和偏远地区有所延长。</p>
 							<p>3. 收费标准：工程师上门安装底座收取30-160元，安装挂架收取60-320元不等，由于墙体及区域不同，具体费用以当地售后为准。</p>
 						</div>
-						<div class="invoice">
+						<div class="invoice curr">
 							<p>1. 发票类型：2016年6月28日起商城正式实行电子发票（除增值税专用发票外），不再开具普通纸质发票；如需开具增值税专用发票，请务必下单前联系客服提供资料：</p>
 							<p>①开票信息（公司全称、税号、地址、电话、开户行&账号）</p>
 							<p>②营业执照、税务登记证、一般纳税人资格证以上电子扫描件或复印件盖章，并提供公司付款证明；</p>
@@ -521,7 +523,7 @@
 							<p>③查询发票真伪网站：www.e-inv.cn</p>
 							<p>注：前期已经开具纸质发票的订单，不可更改为电子发票，若保管不当导致丢失，不可以补开。</p>
 						</div>
-						<div class="afterSale">
+						<div class="afterSale curr">
 							<p>1. 退货标准：</p>
 							<p>支持7天无理由退货，如7天内出现质量问题，可选择退货、换货或维修，30天内出现质量问题，可选择换机或维修。 整机保修一年，主要部件保修三年（以物流显示签收时间开始计算）</p>
 							<p>2. 七天无理由退货	</p>
@@ -541,21 +543,21 @@
 						</div>
 					</div>
 				</div>
-				<div class="commonProblem">
+				<div class="commonProblem" id="commonProblem">
 					
 				</div>
-				<div class="commonProblem">
+				<div class="evaluate" id="evaluate">
 					
 				</div>
 			</div>
 			<div class="picRight l">
 				<div class="side_Box">
 					<ul>
-						<li><span class="l"></span><a href="#" class="l">详情介绍</a></li>
-						<li><span class="l"></span><a href="#" class="l">规格参数</a></li>
-						<li><span class="l"></span><a href="#" class="l">服务政策</a></li>
-						<li><span class="l"></span><a href="#" class="l">常见问题</a></li>
-						<li><span class="l"></span><a href="#" class="l">晒单评价</a></li>
+						<li class="curLi"><span class="l"></span><a href="#detailsIntr" class="l">详情介绍</a></li>
+						<li><span class="l cur"></span><a href="#parameter" class="l">规格参数</a></li>
+						<li><span class="l"></span><a href="#servicePolicy" class="l">服务政策</a></li>
+						<li><span class="l"></span><a href="#commonProblem" class="l">常见问题</a></li>
+						<li><span class="l"></span><a href="#evaluate" class="l">晒单评价</a></li>
 					</ul>
 				</div>
 			</div>
@@ -642,3 +644,5 @@
 	</div>
 	</body>
 </html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="js/goodsdetails.js" ></script>

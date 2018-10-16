@@ -39,14 +39,18 @@ background: url(../img/t-party-icon.png) no-repeat 0 -84px; }
 	color: red;
     font-size: 12px;
     position: absolute;
-    bottom: -2px;
-    left: 9px;
+    text-indent: 1em;
+    width:100%;
+    height: 18px;
+    line-height: 18px;
    	}
 #center .loginBox .text>span.bg{ background-position: -32px -1px}
 #center .loginBox .password>span.bg{ background-position: -96px 0}
-#center .loginBox .text,.password{
-    margin-top: 5px;
+#center .loginBox .text,.password,.pic_YZ,.tel_YZ{
+    margin-top: 8px;
+    margin-bottom: 8px;
     padding-bottom: 15px;
+   
 }
 
 #center .loginBox .loginBtn{ width:100%; height:40px ; background:red; color: #fff; border:0; font-size: 18px; outline: none; cursor: pointer;}

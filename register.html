@@ -17,37 +17,58 @@
 				<p>注册TCL账号</p>
 				<div class="text">
 					<span class="bg"></span>
-					<input type="text" placeholder="手机号码"/>
-					<span class="tishi" ></span>
+					<input type="text" placeholder="手机号码" class="telInput"/>
+					<span class="tishi1"></span>
 				</div>
 				<div class="pic_YZ">
 					<span class="bg"></span>
-					<input type="password" placeholder="图片验证码"/>
+					<input type="text" placeholder="图片验证码" class="picTest"/>
 					<span class="pic">
-						<button class="ma">1234</button>
+						<span class="ma"></span>
 					</span>
-					<span class="tishi"></span>
+					<span class="tishi2"></span>
 				</div>
 				<div class="tel_YZ">
 					<span class="bg"></span>
-					<input type="password" placeholder="短信验证码"/>
+					<input type="text" placeholder="短信验证码"/>
 					<span class="pic">
-						<button class="ma">1234</button>
+						 <span class="ma">获取验证码</span>
 					</span>
-					<span class="tishi"></span>
+					<span class="tishi3"></span>
 				</div>
 				<div class="protocalBox">
 					<input type="checkbox"/ class="protocal" checked="checked">
 					<span>已阅读并同意用户服务条款和隐私政策</span>
 				</div>
 				
-				<button class="loginBtn">注册</button>
+				<input type="button" class="loginBtn" value="注册">
 				<div class="reg_way">
 					<a href="login.html" class="l">已有账号直接登录</a>
 					<a href="#" class="r">推荐第三方登录</a>
 				</div>
 			</div>
+			
+			<br />
+			<div class="loginBox after">
+				<p class="zhangha0">您注册的账号为：<span>122</span></p>
+				<br />
+				<p style="font-size:15px">请设置密码：</p>
+				<div class="text">
+					<span class="bg"></span>
+					<input type="text" placeholder="设置密码"/>
+					<span class="tishi" ></span>
+				</div>
+				<div class="pic_YZ">
+					<span class="bg"></span>
+					<input type="password" placeholder="确认密码"/>
+					
+					<span class="tishi"></span>
+				</div>
+				<p style="color: #999;font-size:15px">密码有8-16位英文字母、数字或符号组成</p>
 				
+				
+				<button class="loginBtn">确认提交</button>
+			</div>
 		</div>
 		<footer>
 			<p>
@@ -64,8 +85,11 @@
 	</body>
 </html>
 <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script type="text/javascript" src="js/reg.js" ></script>
+<script type="text/javascript" src="js/regExpTools.js" ></script>
 <script>
-
+	
 	//根据多选框是否被选中，改变button的属性/禁用
 	$(function(){
 		
@@ -84,5 +108,7 @@
 				//$("input[class='loginBtn']").prop({disabled: true});
 			}
 		});		
-	});
+	
+	
+});
 </script>
