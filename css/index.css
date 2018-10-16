@@ -301,7 +301,7 @@ ul.side_ul li a{display: block;border-bottom:1px solid #eee ; margin-left: 10px;
 #help .w dl>a:hover{ color: #fff;}
 
 /*========================footer=============*/  
-#footer{overflow: hidden; margin: 0 auto;}
+#footer{overflow: hidden; margin: 0 auto; }
 #footer .w { margin-top:25px;line-height: 22px;}
 #footer .w p:nth-child(1)>a{ padding:0 15px ; color: #666; }
 #footer .w p:nth-child(1)>a:first-child {padding-left:0;}
@@ -316,6 +316,18 @@ ul.side_ul li a{display: block;border-bottom:1px solid #eee ; margin-left: 10px;
 /*========================toTop=============*/  
 #Top{ overflow: hidden; position: fixed; right: 30px; bottom: 150px;
     z-index: 200; }
-#Top a{display: block;background: #fff; border:1px solid #f2f2f2; color: #999; font-size: 22px; 
-width: 40px;height: 40px; line-height: 40px; text-align: center; 
-margin-top: 1px; transition: all 2s; overflow: hidden;}
+#Top span{
+	display: block;
+	background: #fff; 
+	border:1px solid #f2f2f2; 
+	color: #999; 
+	font-size: 22px; 
+	width: 40px;
+	height: 40px; 
+	line-height: 40px; 
+	text-align: center; 
+	margin-top: 1px; 
+	transition: all 2s; 
+	overflow: hidden;
+	cursor: pointer;
+}

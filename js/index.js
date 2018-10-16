@@ -1,69 +1,27 @@
-//鼠标移上，二级列表出现
-	$(function(){
-		$(".banner-nav ul li").hover(function(){
-			$(this).css({
-				"background-color":"rgba(255,255,255,.9)"
-			});
-		},
-		function(){
-			$(this).css({
-				"background-color":"rgba(0,0,0,.0)"
-			});
-		});
+
+$(function(){
+//鼠标移上，二级列表出现	
+	$(".banner-nav ul li").hover(function(){
+		$(this).css({"background-color":"rgba(255,255,255,.9)"});
+	},
+	function(){
+		$(this).css({"background-color":"rgba(0,0,0,.0)"});
 	});
-//goods列表的效果
-	$(function(){	
-		$(".goods ul li").hover(function(){
-			$(this).css({
-				"box-shadow":" 0 0 15px 5px #ccc"
-			})
-			.animate({
-				top:"-8px"
-			});
-		},function(){
-			$(this).css({
-				"box-shadow":"0px 0px 0px 0px #fff"
-			})
-			.animate({
-				top:"0px"
-			});
-		});
-		
-//置顶盒子鼠标移上变色
-		$("#Top a").hover(function(){
-			$(this).css({
-				"color":"#f00"
-			});
-		},function(){
-			$(this).css({
-				"color":"#999"
-			});
-			}
-		)
-//置顶
-		$("#Top ul li.toTop").click(function(){
-			$('body,html').animate({scrollTop:0},200);
-			
-		});
 });
-//导航上的二级菜单鼠标滑过出现
-	$(function(){
-		$("#nav .big ul li.tv a").hover(function(){
-			$("#tv").animate({
-				height:"210px"
-			},200).css({
-				"display":"block"
-			});
-		},
-		function(){
-			$("#tv").slideUp(100);		
-		});
+//goods列表的效果
+$(function(){	
+	$(".goods ul li").hover(function(){
+		$(this).css({"box-shadow":" 0 0 15px 5px #ccc"})
+		.animate({top:"-8px"},200);
+	},function(){
+		$(this).css({"box-shadow":"0px 0px 0px 0px #fff"})
+		.animate({top:"0px"},200);
 	});
-	
-	
+});	
 //侧边ul
 //给窗口添加滚动条事件
-window.onscroll = function(){
+$(function(){
+	$(window).scroll(function(){
 	let tv_top = $("#series .tv").offset().top;	
 //	console.log(tv_top);
 	let xiyiji_top = $("#series .xiyiji").offset().top;	
@@ -96,11 +54,12 @@ window.onscroll = function(){
 			//统一
 			$(".side_ul  a").css({	color:"#999"});
 			$(".side_ul li.side_li_health a").css({"color":"#f00"});	
-		}
-		
+		}	
 	}else {
 		$(".side_ul").css({	"display" : "none"});
 	}
-}
+	});
+});
+
 
 

@@ -44,13 +44,19 @@
 #buy-box .buy-box-content div.l a:hover{background: #f00; color: #fff;}
 
 /*=================buy-box-after================*/
-#buy-box-after{overflow: hidden;}
+#buy-box-after{overflow: hidden; }
 #buy-box-after .head{
     height: 40px;
     line-height: 40px;
     padding: 30px 0;
+    font-weight: bold;
+    font-size: 14px;
 }
-#buy-box-after .head .checkAll,.price,.goodsInfo,.num,.sub,.oper{
+#buy-box-after .head .checkAll{
+	width: 130px;
+}
+
+#buy-box-after .head  .price,.goodsInfo,.num,.sub,.oper{
     font-size: 14px;
     color: #333;
     text-align: center;
@@ -62,19 +68,27 @@
     background-color: #FFF;
     border: 1px solid #999;
     cursor: pointer;
+    position: relative;
+    top:5px;
    
 }
 #buy-box-after .head .goodsInfo{width: 610px;}
 #buy-box-after .head .price{width: 100px;}
 #buy-box-after .head .num{width: 176px;}
 #buy-box-after .head .sub{width: 140px;}
-#buy-box-after .head .oper{width: 70px;}
-#buy-box-after ._down{background: #fff;overflow: hidden; min-height:620px ; }
+#buy-box-after .head .oper{width: 70px; }
+#buy-box-after ._down{
+	background: #fff;
+	overflow: hidden; 
+	min-height:620px ; 
+	padding-bottom: 100px;
+}
 #buy-box-after ._down .shopContent .shopbox{
 	padding: 46px 0;
     border-bottom: 1px solid #ccc;
     line-height: 120px;
     overflow: hidden;
+    width:1226px; margin: 0 auto;
 }
 #buy-box-after ._down .shopbox .sel{
 	width:130px; 
@@ -90,6 +104,7 @@
 #buy-box-after ._down .shopbox .info{
 	font-size: 16px;
 	color: #000;
+	width:610px;
 }
 #buy-box-after ._down .shopbox .info span.left{
 	width: 120px;
@@ -151,6 +166,7 @@
 	width: 140px;
 	text-align: center;
 	font-size: 16px;
+	color:red
 }   
 #buy-box-after ._down .shopbox .sub-info span{
     line-height: 20px;
@@ -161,21 +177,26 @@
 	text-decoration: line-through;
 	display: inline-block;
 	margin-top: 0px;
+	position: relative;
+	top:-50px;
+	left: 0;
 }	
 #buy-box-after ._down .shopbox .oper-info{
 	width: 70px;
 	font-size: 16px;
     text-align: center;
     height: 100%;
-    background: #ffc;
     margin-top: 38px;
+    
 }
 #buy-box-after ._down .shopbox .oper-info span{
 	width: 20px;
     height: 30px;
     cursor: pointer;
     color:#666;
-    display: inline-block;
+    display: block;
+    margin-left: 12px;
+    
     background: url(../img/iconimg.png) no-repeat center;
 }
 #buy-box-after ._down .shopbox .oper-info span.shouC{
@@ -191,3 +212,31 @@
 #buy-box-after ._down .shopbox .oper-info span.shouC:hover{
 	background-position: -112px -25px;
 } 
+/*======================结算=====================*/
+#buy-box-after ._down .shopContent div.last{	
+	position: relative;
+	bottom: 0;
+	padding:0
+}
+#buy-box-after ._down .shopContent .shopbox div.continue a{ 
+	color: #000;
+	font-size: 14px;
+}
+#buy-box-after ._down .shopContent .shopbox div.settle>span{
+	font-size: 14px;
+	margin-right:50px ;
+	color:#666
+} 
+#buy-box-after ._down .shopContent .shopbox div.settle>span.totalPrice{
+	font-size: 26px;
+	font-style: normal;
+	color:#f00
+}
+#buy-box-after ._down .shopContent .shopbox div.settle .pay{
+	border:0;
+	background: #f00;
+	width:230px;
+	height: 50px;
+	color: #fff;
+	font-size: 16px;
+}

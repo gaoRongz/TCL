@@ -107,6 +107,9 @@
 #purchase .w .goodsDetail .price .r {
 	position: relative;
 }
+#purchase .w .goodsDetail .price .r:hover .buyMa{
+	display: block;
+}
 #purchase .w .goodsDetail .price .erCode{
 	position: relative;
 }	

@@ -1,18 +1,16 @@
-
 //顶部置顶
 	$(window).scroll (function(){
 		let offset1 = $("#details").offset().top;	
 		//console.log(offset1);
 		//获取页面滚动的距离
 		let  _top = document.body.scrollTop || document.documentElement.scrollTop;
-		
 		if(_top>= offset1 ){
 			$("#fixed").css({"margin-top":"0px"});
 		}else {
 			$("#fixed").css({"margin-top":"-60px"});
 		}
 	});
-
+	
 //服务政策点击li切换不同的div
 $(function(){  
    	 $(".listOrd ul li").click(function(){    
@@ -29,32 +27,19 @@ $(function(){
 		}).fadeIn(300);
 	});	
 });
+
 //点击收藏变色及内容
 $(function(){
 	$(".shouC").click(function(){
-		$(this).find("i").css({color:"#ff0"});
-		$(this).find("span").html("取消收藏").css({color:"#f00"});		
+		if($(".shouC span").text() == "收藏"){
+			$(this).find("i").css({color:"#ff0"});
+			$(this).find("span").html("取消收藏").css({color:"#f00"});	
+		}else{
+			$(this).find("i").css({color:"#999"});
+			$(this).find("span").html("收藏").css({color:"#999"});	
+		}	
 	});	
-})
-
-//	$(".center .pic ul li").click(function(){
-//		//console.log("=======");
-//		let opacity1 = 1;
-//		var timer =	setInterval(function(){
-//			//1. 处理数据
-//			opacity1 -= 0.1;
-//			if(opacity1<=0){
-//				opacity1 = 0;
-//				clearInterval(timer);
-//			}
-//			//2. 改变外观
-//			let opacity2 = 1-opacity1;
-//			console.log(opacity2);
-//			var imgurl=$(this).find('img').attr('src');
-//			$("bigPic").find("img").animate({"opacity":"opacity1"},200);
-//			$(".bigPic").find("img").attr("src",imgurl).animate({"opacity":"opacity2"},200);
-//		},20);
-//	});	
+});
 
 //点击+ - 变换input里的数量
 $(function(){
@@ -65,7 +50,7 @@ $(function(){
 		$(".val").val(num); //将+后的值赋给input
 	});
 	$(".mun .reg").click(function(){	
-		
+
 		$(".val").val(num);      //将-后的值赋给input
 		num--;
 		if(num<=1){
