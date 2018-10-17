@@ -29,24 +29,93 @@ $(function(){
 });
 
 $(function(){
-	let num = $(".val").val(); //获取input里的值
-	$(".num_info .add").click(function(){
-		num++;
-		$(this).next().val(num); //将+后的值赋给input
-	});
-	$(".num_info .reg").click(function(){	
-		$(this).prev().val(num);      //将-后的值赋给input
-		num--;
-		if(num<=1){
-			num=1;
-		}
-	})
+	//购物车删除功能
 	$(".oper-info .delete").click(function(){
-		let dele = $(this).parent().parent().index();
 		if(confirm('确认要删除该宝贝吗？')==true ) { 
-          //removeChild 删除节点  
-			let cell = $(this).parent().parent().parent();
-			cell.empty($(this).parent().parent().eq(dele));	
-        } 
-	})
+         	//remove 删除节点  
+			$(this).parent().parent().remove();	
+        }
+//判断是否有dl，没有的话让空购物车显示  
+		if($(".shopContent").find("dl").length==0){
+			$("#buy-box-after").css({display:"none"});
+			$("#buy-box").css({display:"block"});
+		}else{
+			$("#buy-box").css({display:"none"});
+			$("#buy-box-after").css({display:"block"});
+		}
+		total();
+	})	
+//多选框的点击事件		
 })	
+//购物车+
+function increase(btn){
+    //先获取商品信息
+    let text = $(btn).next();
+    let num = parseInt($(text).val());
+    $(text).val(++num);
+    //单价
+    let price = parseFloat($(text).parent().prev().children(0).html());
+    //把单价赋单价给盒子
+    $(text).parent().prev().children(0).val(price)
+    //总价
+    let subTotal1 = (price*num).toFixed(2);
+    //把总价赋总价给盒子
+    $(text).parent().next().children().eq(0).text(subTotal1);
+    //打折之前被划掉的价格
+    let discount = parseFloat($(text).parent().prev().children().eq(1).html());
+    let subTotal2 = (discount*num).toFixed(2);
+    $(text).parent().next().children().eq(1).html(subTotal2+"元");
+    total();
+}
+//购物车-
+function decrease(btn){
+    //先获取商品信息
+    let text = $(btn).prev();
+    let num = parseInt($(text).val());
+    //判断num不能小于1
+    if(num<2){
+		return;
+	}
+    $(text).val(--num);
+    //单价
+    let price = parseFloat($(text).parent().prev().children().eq(0).html());
+    //总价
+    let subTotal1 = (price*num).toFixed(2);
+//把总价赋总价给盒子
+    $(text).parent().next().children().eq(0).text(subTotal1);
+    let discount = parseFloat($(text).parent().prev().children().eq(1).html());
+    let subTotal2 = (discount*num).toFixed(2);
+    $(text).parent().next().children().eq(1).html(subTotal2+"元");
+    total();
+}
+//购物车
+function total(){
+	let dls = $(".shopContent dl");
+	let sum = 0;
+	let sum_d = 0;
+	let index = $(".shopContent dl").length;
+	
+	for(let i=0; i<dls.length; i++) {
+		let price = parseFloat(dls.eq(i).children().eq(4).children().eq(0).text());
+		let discount = parseFloat(dls.eq(i).children().eq(4).children().eq(1).text())
+		sum += price;
+		sum_d += discount;
+	}
+	$(".totalPrice").children().eq(0).text(sum+".00元");
+	$(".totalPrice").children().eq(1).text(sum_d+".00元");
+	$(".totalNum").text(index);
+	$(".selected").text()
+}
+//多选框的点击事件×
+function check(btn){
+	let length = $("input[type='checkbox']:checked").length;
+	if(length>0){
+		$(".pay").css({background:"#f00"})
+	}else{
+		$(".pay").css({background:"#ccc"})
+	}
+	console.log(length);
+	let num = $(this).parent().parent().children().eq(3).children(1).val();   //个数的值
+	console.log(typeof(num));
+	$(".selected").text(num);
+}

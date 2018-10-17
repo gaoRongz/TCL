@@ -178,9 +178,14 @@
 	overflow: hidden;
 	padding:20px 11px 20px 0px;
 }
-#content .changePage .w .pageNumber{
-	
+#content .changePage .w .pageNumber a:hover {
+	background:#f00;
+	color:#fff;
 }
+/*#content .changePage .w .pageNumber button:hover {
+	background:#f00;
+	color:#fff;
+}*/
 #content .changePage .w .pageNumber a,button{ 
 	font-size: 14px;
     width: 30px;

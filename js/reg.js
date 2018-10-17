@@ -5,7 +5,7 @@ $(function(){
 //手机号码的正则验证     √
 	let content = "";
 	
-	$(".telInput").on("blur",function(){     //获取文本框的内容
+	$(".telInput").blur(function(){     //获取文本框的内容
 		let reg = /^1[34578]\d{9}$/;         
 		let str = $(this).val();
 		if(str!=""){			
@@ -18,8 +18,36 @@ $(function(){
 			$(this).next().html("手机号码不能为空！") ;
 		}
 		content +=  $(this).next().html() ;   //为了获取tel  span里的内容
+		console.log(content);
 	});
-	
+//密码的正则验证     √	
+	$(".password").blur(function(){     //获取文本框的内容
+		var reg = /^[a-zA-Z_][\w\$\.\;\-\+]{5,}$/;      
+		let str = $(this).val();
+		if(str!=""){			
+			if(reg.test(str)){
+				$(this).next().html("") ;
+			}else{
+				$(this).next().html("密码由8-16位英文字母、数字或者符号组成！！") ;
+			}	
+		}else {
+			$(this).next().html("密码不能为空！") ;
+		}
+	});
+//重复密码的正则验证     √		
+	$(".Repeat").blur(function(){     //获取文本框的内容   
+		let str = $(this).val();
+		let passWord = $(this).parent().prev().children().eq(1).val();
+		if(str!=""){	
+			if(str == passWord){
+				$(this).next().html("") ;
+			}else{
+				$(this).next().html("两次密码不一致！") ;
+			}
+		}else {
+			$(this).next().html("密码不能为空！") ;
+		}
+	});
 	
 // 验证码   √
 	let arr = [0,1,2,3,4,5,6,7,8,9,"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
@@ -55,11 +83,9 @@ $(function(){
 	
 	$(".loginBtn").click(function(){
 		$(".loginBox").css({display:"none"});
-		let zhanghao = $(".telInput").val();
-		$(".after .zhanghao span").html("zhanghao");
+		let zhanghao = $(this).parent().children().eq(1).children().eq(1).val();
+		$(this).parent().next().children().eq(0).children().eq(0).html(zhanghao);
 		$(".after").css({display:"block"});
 		
-		
-		console.log(c+"----");
 	});
 })

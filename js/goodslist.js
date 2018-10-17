@@ -30,12 +30,38 @@ $(function(){
 			color:"#f00"
 		})
 	})
-//鼠标移上，换页按钮变红色
-	$(".changePage .pageNumber a").mouseenter(function(){
+//鼠标点击，换页按钮变红色
+	$(".changePage .pageNumber a").click(function(){
 		$(this).addClass('cur').siblings().removeClass('cur');
+		let index = $(this).index();
+		console.log(index);
+		if(index>2){
+			$(this).parent().children(1).css({display:"block",});
+			$(this).parent().find("button").css({display:"none"});
+		}else if(index==2){
+			$(".changePage .pageNumber a.left").css({display:"none"});
+			$(this).parent().find("button").css({display:"block"}).attr("disabled","disabled");
+		}
+		let pageNum = index;
+	//点右往右走	
+		$(".changePage .pageNumber a.right").click(function(){
+			pageNum++;
+			if(pageNum>9){
+				return;
+			}
+			console.log(pageNum);
+			$(this).parent().children().eq(pageNum).addClass('cur').siblings().removeClass('cur');
+		})
+		//点左往左走
+		$(".changePage .pageNumber a.left").click(function(){
+			pageNum--;
+			if(pageNum<2){
+				return;
+			}
+			console.log(pageNum);
+			$(this).parent().children().eq(pageNum).addClass('cur').siblings().removeClass('cur');
+		})
 	});
-	$(".changePage .pageNumber a").mouseleave(function(){
-		$(this).removeClass('cur');
-	});
-
+	
+	
 });

@@ -27,34 +27,7 @@
 			</div>
 		</div>
 	</div>
-
-<!=======top============>
-	<div id="top">
-		<div class="w">
-			<ul class="l">
-				<li class="l"><a href="#">English</a></li>
-				<li class="l"><a href="#">TCL新闻</a></li>
-				<li class="l"><a href="#">企业采购</a></li>
-				<li class="l"><a href="#">经销商之家</a></li>
-				<li class="l"><a href="#">雷鸟</a></li>
-				<li class="l"><a href="#">用户体验中心</a></li>
-				<li class="l"><a href="#">铁粉社区</a></li>
-			</ul>
-			<ul class="r">
-				<li class="l"><a href="#">微信商城</a>
-					<div class="saoMa">
-						<img src="img/wechat.jpg" />
-						<p>关注公众号</p>
-						<p>一键下单购买</p>
-					</div>
-					
-				</li>
-				<li class="l"><a href="#">购物车( <span>0  </span>)</a></li>
-				<li class="l"><a href="#">注册</a></li>
-				<li class="l"><a href="#">登录</a></li>
-			</ul>
-		</div>
-	</div>		
+	<header></header>		
 <!=======top============>	
 	<div id="nav">
 			<div class="navBox">
@@ -569,9 +542,12 @@
 <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
 <script type="text/javascript" src="js/goodsdetails.js" ></script>
 <script type="text/javascript" src="js/common.js" ></script>
-<script type="text/javascript">
-	
+<script type="text/javascript">	
 	$(function(){
+		$("header").load("top.html",function () {
+			addEvent();
+		});
+		
 		$("footer").load("footer.html",function () {
 			addEvent();
 		});

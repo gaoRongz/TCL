@@ -9,32 +9,7 @@
 	</head>
 	<body>
 <!======= top============>
-	<div id="top">
-		<div class="w">
-			<ul class="l">
-				<li class="l"><a href="#">English</a></li>
-				<li class="l"><a href="#">TCL新闻</a></li>
-				<li class="l"><a href="#">企业采购</a></li>
-				<li class="l"><a href="#">经销商之家</a></li>
-				<li class="l"><a href="#">雷鸟</a></li>
-				<li class="l"><a href="#">用户体验中心</a></li>
-				<li class="l"><a href="#">铁粉社区</a></li>
-			</ul>
-			<ul class="r">
-				<li class="l"><a href="#">微信商城</a>
-					<div class="saoMa">
-						<img src="img/wechat.jpg" />
-						<p>关注公众号</p>
-						<p>一键下单购买</p>
-					</div>
-					
-				</li>
-				<li class="l"><a href="#">购物车( <span>0  </span>)</a></li>
-				<li class="l"><a href="#">注册</a></li>
-				<li class="l"><a href="#">登录</a></li>
-			</ul>
-		</div>
-	</div>
+	<header></header>
 <!======= 导航============>	
 	<div id="nav">
 		<div class="big">
@@ -59,7 +34,7 @@
 		<div class="_top">
 			<div class="head w">
 				<div class="checkAll l">
-					<input type="checkbox"/>
+					<input type="checkbox"  onclick="check(this)"/>
 					&nbsp;&nbsp;&nbsp;&nbsp;全选
 				</div>
 				<div class="goodsInfo l">商品信息</div>
@@ -73,7 +48,7 @@
 			<div class="shoplist w">
 				<div class="shopContent">
 					<dl class="shopbox">
-						<dd class="sel l"><input type="checkbox"/></dd>
+						<dd class="sel l"><input type="checkbox" onclick="check(this)"/></dd>
 						<dd class="info l">
 							<span class="left l">
 								<img style="width:120px;height: 120px" src="img/bingX4.jpg">
@@ -88,11 +63,12 @@
 						</dd>
 						<dd class="price_info l">
 							<span>2399.00</span>元
+							<span style="display: none;">2799.00</span>
 						</dd>
 						<dd class="num_info l">
-							<span class="add">+</span>
+							<span class="add" onclick="increase(this)">+</span>
 							<input type="text" value="1" class="val"/>
-							<span class="reg">-</span>
+							<span class="reg" onclick="decrease(this)">-</span>
 						</dd>
 						<dd class="sub-info l">
 							<span class="red">2399.00</span>元
@@ -104,7 +80,7 @@
 						</dd>
 					</dl>
 					<dl class="shopbox">
-						<dd class="sel l"><input type="checkbox"/></dd>
+						<dd class="sel l"><input type="checkbox"  onclick="check(this)"/></dd>
 						<dd class="info l">
 							<span class="left l">
 								<img style="width:120px;height: 120px" src="img/goodslist1.png">
@@ -119,11 +95,12 @@
 						</dd>
 						<dd class="price_info l">
 							<span>2399.00元</span>
+							<span style="display: none;">3499.00</span>
 						</dd>
 						<dd class="num_info l">
-							<span class="add">+</span>
+							<span class="add" onclick="increase(this)">+</span>
 							<input type="text" value="1" class="val"/>
-							<span class="reg">-</span>
+							<span class="reg" onclick="decrease(this)">-</span>
 						</dd>
 						<dd class="sub-info l">
 							<span class="red">2899.00</span>元
@@ -135,7 +112,7 @@
 						</dd>
 					</dl>
 					<dl class="shopbox">
-						<dd class="sel l"><input type="checkbox"/></dd>
+						<dd class="sel l"><input type="checkbox"  onclick="check(this)"/></dd>
 						<dd class="info l">
 							<span class="left l">
 								<img style="width:120px;height: 120px" src="img/goodslist6.png">
@@ -150,11 +127,12 @@
 						</dd>
 						<dd class="price_info l">
 							<span>999.00</span>元
+							<span style="display: none;">1099.00</span>
 						</dd>
 						<dd class="num_info l">
-							<span class="add">+</span>
+							<span class="add" onclick="increase(this)">+</span>
 							<input type="text" value="1" class="val"/>
-							<span class="reg">-</span>
+							<span class="reg" onclick="decrease(this)">-</span>
 						</dd>
 						<dd class="sub-info l">
 							<span class="red">999.00</span>元
@@ -171,14 +149,14 @@
 						<div class="continue l"><a href="#">继续购物>></a></div>
 						<div class="settle r">
 							<span class="total l">
-								共<span class="totalNum">3</span>件商品 已选择<span class="selected">3</span>件
+								共<span class="totalNum">0</span>件商品 已选择<span class="selected">0</span>件
 							</span>
 							<span class="two l">
 								合计（不含运费）：
 							</span>
 							<span class="totalPrice l">
-								<span class="red">10197.00</span>元 
-								<span class="throughLine" style="color: #999; font-size:14px">12797.00元</span>
+								<span class="red">0.00</span> 
+								<span class="throughLine" style="color: #999; font-size:14px">0.00元</span>
 							</span>
 							<button class="pay">去结算</button>
 						</div>
@@ -198,10 +176,16 @@
 <script>
 	
 	$(function(){
+		$("header").load("top.html",function () {
+			addEvent();
+		});
+		
 		$("footer").load("footer.html",function () {
 			addEvent();
 		});
+		
 	})
+//多选
 	jQuery.fn.extend({
 		check:function(isChecked){
 			//this：是调用check函数的对象（也就是jQuery对象）
@@ -214,12 +198,14 @@
 	
 	$(function(){
 		$(".checkAll input").click(function(){
-			$(".shopContent :checkbox").check(this.checked);		
+			$(".shopContent :checkbox").check(this.checked);
+			
 		});
 	});
 	$(function(){
-	$(".checkAll input").bindCheck($(".shopContent :checkbox"));
-});
+		$(".checkAll input").bindCheck($(".shopContent :checkbox"));
+		total();
+	});
 
 
 </script>
