@@ -162,7 +162,7 @@
 	font-size: 14px;
     color: #333;
 }
-#purchase .w .goodsDetail .color a{
+#purchase .w .goodsDetail .color>span{
 	display: block;
 	width: 96px;
 	height: 64px;
@@ -173,7 +173,7 @@
 	font-size: 14px;
 	margin: 0 5px;
 }
-#purchase .w .goodsDetail .color a.cur{
+#purchase .w .goodsDetail .color span.cur{
 	border:1px solid #f00 ;
 }
 #purchase .w .goodsDetail .color .select{
@@ -234,7 +234,12 @@
 	width:120px;
 	font-size: 20px;
 	color:#f00;
-	border:1px solid #f00
+	border:1px solid #f00;
+	display: block;
+	text-align: center;
+	height: 64px;
+	line-height: 64px;
+	cursor: pointer;
 
 }
 /*====================固定顶部=====================*/
@@ -275,6 +280,7 @@
 #fixed .w .r .buyway .erCode{
 	padding-right: 50px;
 }
+
 #fixed .w .r .erCode img.smallMa{
 	width: 14px;
 	height: 14px;
@@ -294,7 +300,10 @@
 	text-align: center;
 	border:1px solid #ccc ;
 	display: none;
-	}
+}
+#fixed .w .r .erCode img.smallMa:hover div.buyMa{
+	display: block;
+}
 #fixed .w .r div.buyMa  img{
 	
 	width: 127px;
@@ -347,7 +356,10 @@
 #details .w .picRight .side_Box{
 	overflow: hidden;
 	padding-top:48px;      
-    position: relative;
+    position: fixed;
+    top:10px;
+    right:157px;
+    z-index: 10000;
     width:146px;
 }
 #details .w .side_Box ul{

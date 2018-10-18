@@ -6,8 +6,10 @@
 		let  _top = document.body.scrollTop || document.documentElement.scrollTop;
 		if(_top>= offset1 ){
 			$("#fixed").css({"margin-top":"0px"});
+			$(".side_Box").css({position:"fixed",right:"157px"})
 		}else {
 			$("#fixed").css({"margin-top":"-60px"});
+			$(".side_Box").css({position:"relative",right:"0px"})
 		}
 	});
 	
@@ -60,33 +62,31 @@ $(function(){
 })
 //点击选择型号，变换边框的颜色
 $(function(){
-	$(".color a").click(function(){
+	$(".color>span").click(function(){
 		$(this).addClass('cur').siblings().removeClass('cur');
 	})
 })
 //sideBox固定
 	$(window).scroll (function(){
-		let d_top = $("#detailsIntr").offset().top;	
-		let p_top = $("#parameter").offset().top;	
-		let s_top = $("#servicePolicy").offset().top;	
-		let c_top = $("#commonProblem").offset().top;	
-		let e_top = $("#evaluate").offset().top;	
+		let offset1 = $("#details").offset().top;	
+		let height = $("#detailsIntr").height();	
+		let offset = offset1+height;
 		//获取页面滚动的距离
 		let  _top = document.body.scrollTop || document.documentElement.scrollTop;
-		$("#details .w .side_Box ul li:nth-child(1) span").css({"background":"red"});
-		if(_top>= d_top ){
-			$("#details .w .side_Box ul li:nth-child(1) span").css({"background":"red"});
-		}else if(_top>= p_top ){
-			$("#details .w .side_Box ul li:nth-child(2) span").css({"background":"red"});
+		$(".side_Box ul li:nth-child(1) span").css({"background":"red"});
+		if(_top>= offset ){
+			$(this).addClass('cur').siblings().removeClass('cur');
+		}else if(_top>= (offset1 +2*height)){
+			$(this).addClass('cur').siblings().removeClass('cur');
 		}
 	});
 
 //加入购物车弹出对话框
-//$(function(){
-//	$("#purchase .w .goodsDetail  .serise .toCart").bind("click", function(){
-//  	("温馨提示", "已加入购物车");
-//	});
-//});
+$(function(){
+	$("#purchase .w .goodsDetail  .serise .toCart").bind("click", function(){
+    	alert( "已加入购物车");
+	});
+});
 
 
 

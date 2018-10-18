@@ -1,4 +1,22 @@
-
+//根据多选框是否被选中，改变button的属性/禁用
+	$(function(){
+		$(".protocal").click(function(){
+			//判断checked是否被选中
+			let result = $(".protocal").is(":checked");
+			console.log("=="+result);
+			//如果为true，
+			if(result == true){
+			$(".loginBtn").css({background:"#f00",color:"#fff"});
+			}else{
+				$(".loginBtn").css({
+					background:"#ccc",
+					color:"#666"
+				}).attr({disabled:"disabled"});
+				//$("input[class='loginBtn']").prop({disabled: true});
+			}
+		});
+		
+	});	
 
 $(function(){
 	
@@ -18,7 +36,7 @@ $(function(){
 			$(this).next().html("手机号码不能为空！") ;
 		}
 		content +=  $(this).next().html() ;   //为了获取tel  span里的内容
-		console.log(content);
+		//console.log(content);
 	});
 //密码的正则验证     √	
 	$(".password").blur(function(){     //获取文本框的内容
@@ -71,7 +89,7 @@ $(function(){
 	$(".picTest").blur(function(){
 		var test = $(this).val();        //文本框的输入的值
 		var test_btn = $(".pic_YZ .pic .ma").html();//随机验证码的值
-		console.log(test+"<br>"+test_btn);
+		//console.log(test+"<br>"+test_btn);
 		if(test == test_btn){
 			$(this).next().next().html("") ;
 		}else{
@@ -79,13 +97,16 @@ $(function(){
 		}
 	});
 	
-	//console.log("====="+content);
-	
 	$(".loginBtn").click(function(){
+		let right = true;
+		let telTishi = $(this).parent().children().eq(1).children().eq(2).text();
+		console.log("telTishi"+telTishi);
+		let testTishi = $(this).parent().children().eq(2).children().eq(2).text();
+		console.log("testTishi"+testTishi);
+//两个提示框都为空时，让它可以跳转
 		$(".loginBox").css({display:"none"});
 		let zhanghao = $(this).parent().children().eq(1).children().eq(1).val();
 		$(this).parent().next().children().eq(0).children().eq(0).html(zhanghao);
-		$(".after").css({display:"block"});
-		
+		$(".after").css({display:"block"});	
 	});
 })

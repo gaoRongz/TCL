@@ -1,6 +1,6 @@
 
-
-#content{overflow: hidden; margin-top: 50px;}
+#describe .w{ height: 60px; line-height: 60px; font-size: 14px; color: #666;}
+#content{overflow: hidden; margin-top: 0px;}
 #content .parameterBox{
 	width:1126px;
     background: #fff;

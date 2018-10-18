@@ -54,4 +54,13 @@
 	color: #f00;
 }
 .after{display: none;}
-
+.after .repeatBtn{
+	width: 100%;
+    height: 40px;
+    background: red;
+    color: #fff;
+    border: 0;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+}

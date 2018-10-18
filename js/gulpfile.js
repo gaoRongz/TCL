@@ -9,33 +9,33 @@ var imagemin = require("gulp-imagemin");
 //task函数的第一个参数function是任务copyHtml对应的功能
 gulp.task("copy-html",function(){
 	//gulp.src("index.html").pipe(gulp.dest("dist"));
-	gulp.src("*.html").pipe(gulp.dest("D:\\PHPTutorial\\WWW\\myjumeiyoupin"));
+	gulp.src("*.html").pipe(gulp.dest("D:\\phpStudy\\phpStudy\\WWW\\TCL"));
 });
 gulp.task("copy-php",function(){
 	//gulp.src("index.html").pipe(gulp.dest("dist"));
-	gulp.src("*.php").pipe(gulp.dest("D:\\PHPTutorial\\WWW\\myjumeiyoupin"));
+	gulp.src("*.php").pipe(gulp.dest("D:\\phpStudy\\phpStudy\\WWW\\TCL"));
 });
 gulp.task("css",function(){
 	gulp.src('css/**/*')
-	.pipe(gulp.dest('D:\\PHPTutorial\\WWW\\myjumeiyoupin\\css'));
+	.pipe(gulp.dest('D:\\phpStudy\\phpStudy\\WWW\\TCL'));
 });
 
 gulp.task("img",function(){
 	gulp.src('img/**/*')
-	.pipe(gulp.dest('D:\\PHPTutorial\\WWW\\myjumeiyoupin\\img'));
+	.pipe(gulp.dest('D:\\phpStudy\\phpStudy\\WWW\\TCL'));
 });
 gulp.task("js",function(){
 	gulp.src('js/**/*')
-	.pipe(gulp.dest('D:\\PHPTutorial\\WWW\\myjumeiyoupin\\js'));
+	.pipe(gulp.dest('D:\\phpStudy\\phpStudy\\WWW\\TCL'));
 });
 
 
-gulp.task("build",["copy-html","copy-php","css","img","logimg"],function(){
+gulp.task("build",["copy-html","copy-php","css","img"],function(){
 	console.log("ok");
 });
-gulp.task('copyallfile',function(){
+gulp.task('copyfile',function(){
 	gulp.src('*/**/*')
-	.pipe(gulp.dest('D:\\PHPTutorial\\WWW\\myjumeiyoupin'));
+	.pipe(gulp.dest('D:\\phpStudy\\phpStudy\\WWW\\TCL'));
 });
 
 //监听
